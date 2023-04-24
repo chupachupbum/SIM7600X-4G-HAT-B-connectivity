@@ -37,7 +37,7 @@ def get_gps_position():
 	answer = 0
 	print('Start GPS session...')
 	rec_buff = ''
-	send_at('AT+CGPS=1,1','OK',1) # Power on GPS module
+	send_at('AT+CGPS=1,2','OK',1) # Power on GPS module
 	time.sleep(2)
 	while rec_null:
 		answer = send_at('AT+CGPSINFO','+CGPSINFO: ',1) # Get lat and long info

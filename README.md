@@ -110,3 +110,7 @@ GNSS format:
 <HDOP>: Horizontal Dilution Of Precision.
 <VDOP>: Vertical Dilution Of Precision
 ```
+
+## SIMCOM7600 AT manual
+
+https://www.waveshare.com/w/upload/8/8f/SIM7500_SIM7600_Series_AT_Command_Manual_V1.12.pdf

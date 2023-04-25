@@ -39,8 +39,8 @@ def get_gps_position():
     time.sleep(1)
     send_at('AT+CGPSHOT', 'OK', 1)  # Config hot start
     time.sleep(1)
-    send_at('AT+CGPS=1,2','OK',1)   # Power on GPS module
-    time.sleep(1)
+    # send_at('AT+CGPS=1,2','OK',1)   # Power on GPS module
+    # time.sleep(1)
     while rec_null:
         answer = send_at('AT+CGPSINFO','+CGPSINFO: ',1) # Get GPS info
         if 1 == answer:

@@ -65,3 +65,48 @@ Send the follwing command to switch to RNDIS
 Check if the setup was successfully
 
 `ifconfig`
+
+# Appendix
+
+## GPS fields' info:
+
+GPS format:
+
+```
++CGPSINFO: [<lat>],[<N/S>],[<log>],[<E/W>],[<date>],[<UTC time>],[<alt>],[<speed>],[<course>]
+
+<lat>: Latitude of current position. Output format is ddmm.mmmmmm
+<N/S>: N/S Indicator, N=north or S=south
+<log>: Longitude of current position. Output format is dddmm.mmmmmm
+<E/W>: E/W Indicator, E=east or W=west
+<date>: Date. Output format is ddmmyy
+<UTC time>: UTC Time. Output format is hhmmss.s
+<alt>: MSL Altitude. Unit is meters.
+<speed>: Speed Over Ground. Unit is knots.
+<course>: Course. Degrees.
+<time>: The range is 0-255, unit is second, after set <time> will report the GPS information every the seconds
+```
+
+GNSS format:
+
+```
++CGNSSINFO: [<mode>],[<GPS-SVs>],[<GLONASS-SVs>],[BEIDOU-SVs],[<lat>],[<N/S>],[<log>],[<E/W>],[<date>],[<UTC-time>],[<alt>],[<speed>],[<course>],[<PDOP>],[HDOP],[VDOP]
+
+<mode>: Fix mode 2=2D fix 3=3D fix
+<GPS-SVs>: GPS satellite valid numbers, scope: 00-12
+< GLONASS-SVs >: GLONASS satellite valid numbers scope: 00-12
+<BEIDU-SVs>: BEIDOU satellite valid numbers scope: 00-12
+<lat>: Latitude of current position. Output format is ddmm.mmmmmm
+<N/S>: N/S Indicator, N=north or S=south
+<log>: Longitude of current position. Output format is dddmm.mmmmmm
+<E/W>: E/W Indicator, E=east or W=west
+<date>: Date. Output format is ddmmyy
+<UTC time>: UTC Time. Output format is hhmmss.s
+<alt>: MSL Altitude. Unit is meters.
+<speed>: Speed Over Ground. Unit is knots.
+<course>: Course. Degrees.
+<time>: The range is 0-255, unit is second, after set <time> will report the GPS information every the seconds.
+<PDOP>: Position Dilution Of Precision.
+<HDOP>: Horizontal Dilution Of Precision.
+<VDOP>: Vertical Dilution Of Precision
+```

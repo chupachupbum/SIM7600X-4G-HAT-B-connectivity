@@ -55,6 +55,7 @@ def get_gps_position():
             send_at('AT+CGPS=0','OK',1)
             return False
         time.sleep(0.5)
+        
         ans2 = send_at('AT+CGNSSINFO', '+CGNSSINFO: ', 1) # Get GNSS info
         if 1 == ans2:
             ans2 = 0
